@@ -1,0 +1,145 @@
+/* Reset básico e fonte */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #0072c6 70%, #00c6d7 100%);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Navegação */
+nav {
+  background: #005a9e;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00c6d7;
+}
+
+/* Seções principais */
+section {
+  display: none;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Exibir a seção inicial */
+section#inicio {
+  display: block;
+}
+
+/* Botão CTA */
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #0072c6 60%, #00c6d7 100%);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #005a9e 60%, #00a6b7 100%);
+}
+
+/* Grid de produtos */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Card do produto */
+.produto {
+  background: #f9f9f9;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 114, 198, 0.08);
+  transition: transform 0.2s;
+  border: 1px solid #ccc;
+}
+
+.produto:hover {
+  transform: translateY(-4px);
+}
+
+.produto img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+/* Rodapé fixo */
+footer {
+  background: linear-gradient(90deg, #222 70%, #0072c6 100%);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+/* Caixa da Calculadora */
+.calculadora-box {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-left: 5px solid #0072c6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos da calculadora */
+.calculadora-box label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.calculadora-box input,
+.calculadora-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #0072c6;
+}

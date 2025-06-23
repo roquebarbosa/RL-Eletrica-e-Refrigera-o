@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RL Elétrica e Climatização</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, nav, footer {
+      background-color: #007BFF;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      display: none;
+    }
+
+    .cta-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .grid-produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .produto {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      background: #f9f9f9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .calculadora-box {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RL Elétrica e Climatização</h1>
+    <p>Soluções práticas com agilidade e segurança para o seu imóvel ou condomínio!</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo à RL Elétrica e Climatização!</h2>
+      <p>Oferecemos soluções completas em instalações elétricas e sistemas de climatização para residências, comércios e condomínios.</p>
+      <ul>
+        <li>Instalação e manutenção de ar-condicionado split e janela</li>
+        <li>Projetos e execução de instalações elétricas</li>
+        <li>Manutenção preventiva e corretiva</li>
+        <li>Atendimento rápido e personalizado</li>
+      </ul>
+      <a href="#produtos" class="cta-btn">Calculadora de BTUs</a>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre a RL</h2>
+      <p>Somos uma empresa especializada em climatização e elétrica, com equipe qualificada para garantir qualidade e segurança nos serviços prestados.</p>
+    </section>
+
+    <section id="produtos">
+      <h2>Calculadora de BTUs</h2>
+      <p>Descubra a potência ideal do seu ar-condicionado com nossa calculadora de BTUs!</p>
+      <div class="calculadora-box">
+        <label for="area">Área do cômodo (m²):</label>
+        <input type="number" id="area" placeholder="Ex: 20" required>
+
+        <label for="pessoas">Número de pessoas no ambiente:</label>
+        <input type="number" id="pessoas" placeholder="Ex: 2" required>
+
+        <label for="equipamentos">Quantidade de eletrônicos ligados:</label>
+        <input type="number" id="equipamentos" placeholder="Ex: 1" required>
+
+        <label for="sol">Incidência de sol no local:</label>
+        <select id="sol">
+          <option value="pouco">Pouca</option>
+          <option value="muito">Muita</option>
+        </select>
+
+        <button class="cta-btn" onclick="calcularBTU()">Calcular</button>
+        <div id="resultado"></div>
+      </div>
+
+      <h2>Produtos Recomendados</h2>
+      <p>Veja alguns aparelhos recomendados com base na sua necessidade:</p>
+      <div class="grid-produtos">
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Split Hi Wall Samsung WindFree AI Inverter 12.000 Btus Frio 220v R-32.jpg" alt="Samsung windFree AI Inverter 12.000 BTUs">
+        <h3>Ar Condicionado Split Hi Wall Samsung WindFree AI Inverter 12.000 Btus Frio 220v R-32</h3>
+        <a href="https://amzn.to/4kVHBlg" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Split Hi Wall Samsung WindFree AI Inverter 12.000 Btus Frio 220v R-32.jpg" alt="Samsung windFree AI Inverter 12.000 BTUs">
+        <h3>Ar-condicionado Split Inverter 9000 Btus Samsung Windfree Ai Wi-fi High Wall Só Frio 220v</h3>
+        <a href="https://amzn.to/45Fanlv" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Split Hi Wall Samsung WindFree AI Inverter 22000BTUS Frio 220v R-32.jpg" alt="Samsung windFree AI Inverter 12.000 BTUs">
+        <h3>Ar Condicionado Hi Wall Samsung WindFree Connect Inverter 22.000 Btus Frio 220v</h3>
+        <a href="https://amzn.to/3G1hydg" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Hi Wall LG Dual Inverter Voice 9.000 Btus Frio 220v R-32_.jpg" alt="LG Inverter 12.000 BTUs">
+        <h3>Ar Condicionado Hi Wall LG Dual Inverter Voice 9.000 Btus Frio 220v R-32</h3>
+        <a href="https://amzn.to/3ZHQ6rH" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Hi Wall LG Dual Inverter Voice 9.000 Btus Frio 220v R-32_.jpg" alt="LG Inverter 12.000 BTUs">
+        <h3>Ar Condicionado Hi Wall LG Dual Inverter Voice 12.000 Btus Frio 220v R-32</h3>
+        <a href="https://amzn.to/4ni4ykk" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Ar Condicionado Hi Wall LG Dual Inverter Voice 9.000 Btus Frio 220v R-32_.jpg" alt="LG Inverter 12.000 BTUs">
+        <h3>Ar-Condicionado Split Inverter Dual Voice +IA R32 WI-FI 18.000 BTUs LG Frio 220v</h3>
+        <a href="https://amzn.to/45Fanlv" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Springer Midea  Barril.jpg" alt="Springer Midea  Barril">
+        <h3>Ar Condicionado Split Hi Wall Inverter Springer Midea Airvolution Connect 9.000 Btus Frio 220v R-32</h3>
+        <a href="https://amzn.to/4k0uUEg" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Springer Midea  Barril.jpg" alt="Springer Midea  Barril">
+        <h3>Ar Condicionado Split Hi Wall Inverter Springer Midea AirVolution Connect 12000 BTU/h Frio 220 Volts</h3>
+        <a href="https://amzn.to/4k63RYz" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/Springer Midea  Barril.jpg" alt="Springer Midea  Barril">
+        <h3>Ar-condicionado Split Inverter 18000 Btus Springer Midea Airvolution Connect High Wall Só Frio 220v</h3>
+        <a href="https://amzn.to/3HSRL7F" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+      <div class="produto">
+        <img src="/home/roque/HTML/RL Elétrica e climatização/imagens/consul janela.jpg" alt="Consul CCN07FB 7500 BTUs">
+        <h3>Ar condicionado janela 7500 BTUs Consul frio eletrônico com design moderno - CCN07FB 110V</h3>
+        <a href="https://amzn.to/3T61YzX" target="_blank" class="cta-btn">Ver na Amazon</a>
+      </div>
+    </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para solicitar um orçamento ou tirar dúvidas!</p>
+      <form>
+        <label for="nome">Nome:</label><br />
+        <input type="text" id="nome" name="nome" required /><br />
+        <label for="email">E-mail:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="mensagem">Mensagem:</label><br />
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br />
+        <button type="submit" class="cta-btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 RL Soluções e Serviços. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function calcularBTU() {
+      const area = parseFloat(document.getElementById('area').value);
+      const pessoas = parseInt(document.getElementById('pessoas').value);
+      const equipamentos = parseInt(document.getElementById('equipamentos').value);
+      const sol = document.getElementById('sol').value;
+
+      if (!area || !pessoas || !equipamentos || isNaN(area) || isNaN(pessoas) || isNaN(equipamentos)) {
+        document.getElementById('resultado').innerHTML = 'Preencha todos os campos corretamente.';
+        return;
+      }
+
+      let btu = area * 600 + pessoas * 600 + equipamentos * 600;
+      if (sol === "muito") btu += 800;
+
+      document.getElementById('resultado').innerHTML = `Potência recomendada: <strong>${btu} BTUs</strong>`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("main section");
+
+      const showSection = (id) => {
+        sections.forEach((s) => (s.style.display = "none"));
+        const target = document.getElementById(id);
+        if (target) {
+          target.style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      };
+
+      document.querySelectorAll("a[href^='#']").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = link.getAttribute("href").substring(1);
+          showSection(id);
+        });
+      });
+
+      showSection("inicio");
+    });
+  </script>
+</body>
+</html>
