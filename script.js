@@ -26,8 +26,8 @@
 </script>
 <script>
   // Substitua pelo seu token e chat_id do Telegram
-   const TELEGRAM_BOT_TOKEN = '7793676911:AAEkKyd22lRWXzttdX3Qabmu5tFwvaSZSA8';
-   const TELEGRAM_CHAT_ID = '8139438816';
+   const TELEGRAM_BOT_TOKEN = 'XXX';
+   const TELEGRAM_CHAT_ID = 'XXXX';
   document.querySelector("#contato form").addEventListener("submit", function(e) {
     e.preventDefault();
 
